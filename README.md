@@ -22,7 +22,7 @@ LLM-RAG Assistant is an AI-powered document retrieval chatbot that allows users 
 - **Hugging Face Embeddings** (Text Representation)
 - **Whisper** (Speech Recognition)
 - **PyMuPDF & Docx2txt** (Document Processing)
-- **Ollama** (LLM API)
+- **Ollama** 
 
 ## Installation & Setup
 
