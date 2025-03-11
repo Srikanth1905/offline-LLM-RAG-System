@@ -28,8 +28,8 @@ LLM-RAG Assistant is an AI-powered document retrieval chatbot that allows users 
 
 ### Clone the Repository
 ```
-git clone https://github.com/yourusername/yourrepo.git
-cd yourrepo
+git clone https://github.com/Srikanth1905/offline-LLM-RAG.git
+cd offline-LLM-RAG
 ```
 
 ### Install Dependencies
@@ -42,6 +42,83 @@ pip install -r requirements.txt
 streamlit run main.py
 ```
 
+
+
+## Downloading Models from Ollama
+
+### Install Ollama
+
+#### For macOS & Linux
+```sh
+curl -fsSL https://ollama.com/install.sh | sh
+```
+
+#### For Windows
+1. Download the installer from [Ollama’s official website](https://ollama.com/download).
+2. Run the installer and follow the setup instructions.
+
+Verify Ollama installation:
+```sh
+ollama --version
+```
+
+### Download a Model
+```sh
+ollama pull <model_name>
+```
+Example:
+```sh
+ollama pull llama3
+```
+Other models:
+```sh
+ollama pull mistral
+ollama pull gemma
+ollama pull phi3
+```
+Check available models:
+```sh
+ollama list
+```
+
+### Running a Model
+```sh
+ollama run llama3
+```
+Programmatically using Python:
+```python
+import ollama
+
+response = ollama.chat(
+    model='llama3',
+    messages=[{'role': 'user', 'content': 'Hello!'}]
+)
+
+print(response['message'])
+```
+
+### Managing Models
+List installed models:
+```sh
+ollama list
+```
+Remove a model:
+```sh
+ollama rm <model_name>
+```
+Update a model:
+```sh
+ollama update <model_name>
+```
+
+### Custom Model Fine-tuning
+```sh
+echo "FROM llama3" > Modelfile
+ollama create my-model -f Modelfile
+ollama run my-model
+```
+
+For more details, visit [Ollama's official documentation](https://ollama.com/docs). 🚀
 
 ## Project Structure
 ```
@@ -111,7 +188,7 @@ We welcome contributions! Follow these steps:
 
 ## Contact
 
-For issues and discussions, please open an **[issue](https://github.com/Srikanth1905/offline-LLM-RAG/issues)**:  
+For issues and discussions, please open an **[issue](https://github.com/Srikanth1905/offline-LLM-RAG/issues)** or contact:
 
 ## Star this Repo if You Like It! ⭐
 
