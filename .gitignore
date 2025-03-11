@@ -1,0 +1,12 @@
+# Python-related
+__pycache__/
+*.pyc
+*.pyo
+
+# Log and Temp files
+log/
+temp_audio/
+uploaded_data/
+
+# Environment Variables
+.env
